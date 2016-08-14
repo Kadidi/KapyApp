@@ -29,23 +29,25 @@
                     <li>@Html.ActionLink("News", "Index", "News1")</li>
                     @*<li>@Html.ActionLink("About", "About", "Home")</li> --> *@
                     @* <li>@Html.ActionLink("Contact", "Contact", "Home")</li> *@
-                    
-                   @* <li>@Html.ActionLink("Categories", "Categories", "News")</li> *@
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Categories
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Categories/Top News">Top News</a></li>
-                            <li><a href="Categories/Sport">Sport</a></li>
-                            <li><a href="Categories/Politics">Politics</a></li>
-                            <li><a href="Categories/World">World</a></li>
-                        </ul>
-                    </li>
+
+                    @* <li>@Html.ActionLink("Categories", "Categories", "News")</li> *@
+                    @* <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Categories
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+
+                </ul>
+            </li>
+                    *@
+
                     <li>@Html.ActionLink("Search", "Search", "News")</li>  <!-- a button for searching news - the search method will be implemented in the News controller -->
 
-                    </ul>
+
+                    @Html.Action("CategoryDropList", "Partial")
+
+                </ul>
                     @Html.Partial("_LoginPartial")
 
                 </div>
